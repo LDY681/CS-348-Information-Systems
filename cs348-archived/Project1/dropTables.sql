@@ -1,0 +1,12 @@
+drop table advisor;
+drop table classroom;
+drop table course;
+drop table department;
+drop table instructor;
+drop table prereq;
+drop table section;
+drop table student;
+drop table takes;
+drop table teaches;
+drop table time_slot;
+drop table grade_points;

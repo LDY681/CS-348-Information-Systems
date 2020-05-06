@@ -1,0 +1,54 @@
+insert into DEPARTMENT values (11,'Computer Sciences','West Lafayette');
+insert into DEPARTMENT values (22,'Management','West Lafayette');
+insert into DEPARTMENT values (33,'Medical Education','Purdue Calumet');
+insert into DEPARTMENT values (44,'Education','Purdue North Central');
+insert into DEPARTMENT values (55,'Pharmacal Sciences','Indianapolis');
+insert into DEPARTMENT values (66,'Physics', 'West Lafayette');
+
+insert into STUDENT values (04181,'Jack',11,'SO',str_to_date('1998,01,01','%Y,%m,%d'));
+insert into STUDENT values (06711,'A.Smith',22,'FR',str_to_date('1995,01,01','%Y,%m,%d'));
+insert into STUDENT values (12341,'Banks',33,'SR',str_to_date('1997,01,01','%Y,%m,%d'));
+insert into STUDENT values (37261,'M.Lee',55,'SO',str_to_date('1993,01,01','%Y,%m,%d'));
+insert into STUDENT values (48291,'Bale',33,'JR',str_to_date('1993,01,01','%Y,%m,%d'));
+insert into STUDENT values (57651,'Lim',11,'SR',str_to_date('1996,01,01','%Y,%m,%d'));
+insert into STUDENT values (00191,'Sharon',22,'FR',str_to_date('1993,01,01','%Y,%m,%d'));
+insert into STUDENT values (73571,'Johnson',11,'JR',str_to_date('1996,01,01','%Y,%m,%d'));
+insert into STUDENT values (80161,'Cho',55,'JR',str_to_date('1992,01,01','%Y,%m,%d'));
+insert into STUDENT values (80162,'Angin',11,'SR',str_to_date('1990,01,01','%Y,%m,%d'));
+
+insert into FACULTY values (1010,'Layton',11);
+insert into FACULTY values (1020,'Jungles',22);
+insert into FACULTY values (1030,'Guzaldo',55);
+insert into FACULTY values (1040,'Boling',44);
+insert into FACULTY values (1050,'Mason',11);
+insert into FACULTY values (1060,'Zwink',22);
+insert into FACULTY values (1070,'Walton',55);
+insert into FACULTY values (1080,'Teach',55);
+insert into FACULTY values (1090,'Jason',55);
+
+insert into CLASS values ('ENG40000',str_to_date('0830','%H%i'),'U003',1040);
+insert into CLASS values ('ENG32000', str_to_date('0930','%H%i'),'R128',1040);
+insert into CLASS values ('COM10000', str_to_date('1130','%H%i'),'L108',1040);
+insert into CLASS values ('ME30800', str_to_date('1030','%H%i'),'R128',1020);
+insert into CLASS values ('CS448', str_to_date('0930','%H%i'),'R128',1010);
+insert into CLASS values ('HIS21000', str_to_date('0130','%H%i'),'L108',1040);
+insert into CLASS values ('MATH27500', str_to_date('0230','%H%i'),'L108',1050);
+insert into CLASS values ('STAT11000', str_to_date('0430','%H%i'),'R128',1050);
+insert into CLASS values ('PHYS10000', str_to_date('0430','%H%i'),'U003',1010);
+
+insert into ENROLLED values (04181,'CS448', 'A');
+insert into ENROLLED values (04181,'MATH27500', 'B');
+insert into ENROLLED values (12341,'ENG40000', 'C');
+insert into ENROLLED values (12341,'MATH27500', 'A');
+insert into ENROLLED values (80161,'ENG40000', 'C');
+insert into ENROLLED values (80161,'ENG32000', 'D');
+insert into ENROLLED values (80161,'HIS21000', 'B');
+insert into ENROLLED values (80161,'STAT11000', 'B');
+insert into ENROLLED values (04181,'STAT11000', 'C');
+insert into ENROLLED values (12341,'COM10000', 'A');
+insert into ENROLLED values (06711,'ENG40000', 'A');
+insert into ENROLLED values (06711,'STAT11000', 'A');
+insert into ENROLLED values (12341,'HIS21000', 'C');
+insert into ENROLLED values (57651,'PHYS10000', 'A');
+insert into ENROLLED values (57651,'ENG32000', 'A');
+insert into ENROLLED values (57651,'COM10000', 'A');

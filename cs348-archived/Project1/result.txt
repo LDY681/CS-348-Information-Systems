@@ -1,0 +1,47 @@
+>>>Query 1
+45678 Levy
+>>>Query 2
+76543	       4
+98988	       4
+00128	    3.87
+55739	     3.7
+54321	     3.5
+12345	    3.43
+19991	       3
+44553	     2.7
+23121	     2.3
+98765	    2.26
+45678	    2.02
+76653	       2
+>>>Query 3
+CS-101	 1		   6
+CS-347	 1		   2
+PHY-101  1		   1
+>>>Query 4
+CS-101	 1
+>>>Query 5
+Srinivasan			3
+Brandt				2
+Crick				2
+Katz				2
+>>>Query 6
+Spring	     2010	     7
+Spring	     2009	     3
+Fall	     2009	     3
+>>>Query 7
+12345 Shankar			      4
+45678 Levy			      3
+>>>Query 8
+Srinivasan		     10
+Brandt			      3
+Katz			      2
+Crick			      2
+>>>Query 9
+Comp. Sci.	     CS-101
+Comp. Sci.	     CS-190
+Comp. Sci.	     CS-315
+Comp. Sci.	     CS-319
+Comp. Sci.	     CS-347
+History 	     HIS-351
+>>>Query 10
+EE-181	 Elec. Eng.	      PHY-101  Physics

@@ -1,0 +1,23 @@
+PhysicianID	Name	Position
+1007	Jacob	Surgical Attending Physician
+Department	Dept head	Total hrs worked	Number of appointments
+Cardiology	Jimmy	10	4
+Department	Dept head	Total hrs worked	Number of appointments
+Dermatology	Brown	2	2
+Department	Dept head	Total hrs worked	Number of appointments
+Obstetrics	Chris	1	1
+Department	Dept head	Total hrs worked	Number of appointments
+Pediatrics Division	Jason	5	2
+Department	Dept head	Total hrs worked	Number of appointments
+Psychiatry	Susan	4	1
+AppointmentID	Patient	PrepNurse	Physician	Start	End
+1	845693217	101	1001	2019-11-05 14:30:00	2019-11-05 15:30:00
+2	784562198	104	1001	2019-11-15 13:00:00	2019-11-15 15:30:00
+3	289784621	102	1002	2019-09-05 12:30:00	2019-09-05 13:30:00
+4	289784621	101	1002	2019-11-05 14:30:00	2019-11-05 15:30:00
+5	946752553	103	1006	2019-08-24 10:30:00	2019-08-24 11:30:00
+6	451976325	104	1007	2019-12-05 11:30:00	2019-12-05 15:30:00
+7	489315678	103	1004	2019-07-21 15:30:00	2019-07-21 16:30:00
+8	489315678	103	1003	2019-08-21 10:30:00	2019-08-21 13:30:00
+9	289784621	102	1009	2019-10-21 16:30:00	2019-10-21 17:30:00
+10	489315678	103	1008	2019-10-10 10:30:00	2019-10-10 14:30:00

@@ -1,0 +1,25 @@
+station
+stn_ID
+stn_Name
+City 
+State
+
+-------------
+Trains
+Train_ID
+Train_Name,
+Start_Stn_ID
+Dest_Stn_ID
+Dist_Miles
+Business_Class_Fare
+Economy_Class_Fare
+Running_Hours
+
+-------------
+Train_Timings
+Train_ID
+Sl_No --- It's used to order trains as they come into the station. Same train id's will look at SL_NO to see which route comes first.
+Stn_ID
+Day_No
+Arrives_At
+Departs_At

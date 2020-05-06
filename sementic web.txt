@@ -1,0 +1,138 @@
+#3.1
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?city ?numberOfUndergraduateStudents ?usnwrNu ?homepage
+WHERE {
+  :Purdue_University dbo:city ?city .
+  :Purdue_University dbo:numberOfUndergraduateStudents ?numberOfUndergraduateStudents .
+  :Purdue_University dbp:usnwrNu ?usnwrNu .
+  :Purdue_University foaf:homepage ?homepage .
+} 
+
+#3.2
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?name ?numberOfStudents
+WHERE {
+  ?university rdf:type dbo:University .
+  ?university foaf:name ?name .
+  ?university dbo:numberOfStudents ?numberOfStudents .
+  FILTER (?numberOfStudents > 35000) .
+  FILTER (lang(?name) = 'en') .
+} 
+ORDER BY DESC(?numberOfStudents)
+LIMIT 15
+
+#3.3
+
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?name ?foundingDate
+WHERE {
+  ?university rdf:type dbo:University .
+  ?university dbo:state dbr:Indiana .
+  ?university foaf:name ?name .
+  ?university dbo:foundingDate ?foundingDate .
+  FILTER (lang(?name) = 'en') .
+} 
+ORDER BY(?foundingDate)
+
+#3.4 (TODO, only 98 lines)
+
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?name ?foundingDate
+WHERE {
+  ?university rdf:type dbo:University .
+  ?university dbo:state dbr:Indiana .
+  ?university foaf:name ?name .
+  OPTIONAL { ?university dbo:foundingDate ?foundingDate . }
+  FILTER (lang(?name) = 'en') .
+} 
+ORDER BY DESC(?foundingDate)
+
+#3.5
+
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?affiliation
+WHERE {
+ :Purdue_University dbo:affiliation ?affiliation .
+ FILTER(regex(?affiliation, 'Association', 'i'))
+} 
+
+#3.6
+
+PREFIX db: <http://dbpedia.org/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?affiliation ?formationYear ?leaderName
+WHERE {
+  :Purdue_University dbo:affiliation ?affiliation .
+  OPTIONAL { ?affiliation dbo:formationYear ?formationYear . }
+  OPTIONAL { ?affiliation dbp:leaderName ?leaderName . } 
+} 
+
+#3.7
+
+PREFIX db: <http://dbpedia.org/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT DISTINCT ?name
+WHERE {
+  ?university rdf:type dbo:University .
+  ?university dbp:campus ?campus .
+  ?university dbp:country ?country .
+  ?university dbp:usnwrNu ?usnwrNu .
+  ?university dbp:forbes ?forbes .
+  ?university rdfs:comment ?comment .
+  ?university foaf:name ?name .
+  FILTER (?forbes < 150)
+  FILTER(regex(?comment, 'Indiana', 'i'))
+} 
+
+
+
+
